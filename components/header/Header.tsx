@@ -1,103 +1,77 @@
-"use client";
-import Link from "next/link";
-import React, { useState } from "react";
+"use client"
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+
+const navData = {
+  logo: {
+    text: "Company Logo",
+    link: "/"
+  },
+  links: [
+    { title: "Home", href: "/" },
+    { title: "About", href: "/about" },
+    { title: "Services", href: "/services" },
+    { title: "Contact", href: "/contact" }
+  ],
+  buttons: [
+    { text: "Get a quote", href: "/signin" }
+  ]
+};
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleToggle = () => {
-    setOpen(!open);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const navLinks = [
-    { title: "Features", href: "#_" },
-    { title: "About", href: "#_" },
-  ];
-
   return (
-    <div className="justify-center w-full mx-auto bg-gray-100">
-      <div className="flex flex-col w-full px-8 py-2 mx-auto md:px-12 md:items-center md:justify-between md:flex-row lg:px-32 max-w-7xl">
-        <div className="flex flex-row items-center justify-between text-black">
-          <a
-            className="inline-flex items-center gap-3 text-xl font-bold tracking-tight text-black"
-            href="/"
-          >
-            <span> ❖ </span>
-            <span>Windstatic</span>
-          </a>
-          <button
-            title="Toggle"
-            className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
-            onClick={handleToggle}
-          >
-            <svg
-              className="w-6 h-6"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              {open ? (
-                <>
-                  <path
-                    className="hidden"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6"
-                  />
-                  <path
-                    className="inline-flex"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </>
-              ) : (
-                <>
-                  <path
-                    className="inline-flex"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                  <path
-                    className="hidden"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </>
-              )}
-            </svg>
-          </button>
+    <nav className="bg-stone-200 shadow-lg">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href={navData.logo.link} className="text-black font-bold text-xl">{navData.logo.text}</a>
+          </div>
+          {/* Navigation Links */}
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center space-x-4">
+              {navData.links.map((link, index) => (
+                <a key={index} href={link.href} className="text-black hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">{link.title}</a>
+              ))}
+            </div>
+          </div>
+          {/* Buttons */}
+          <div className="hidden md:flex md:items-center md:ml-6">
+            {navData.buttons.map((button, index) => (
+              <a key={index} href={button.href} className="bg-red-600 hover:bg-gray-100 text-white font-medium text-sm py-2 px-4 rounded shadow">{button.text}</a>
+            ))}
+          </div>
+          {/* Mobile Menu Button */}
+          <div className="-mr-2 flex md:hidden">
+            <button onClick={toggleMobileMenu} className="text-black hover:bg-gray-700 inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false">
+              <span className="sr-only">Open main menu</span>
+              {isMobileMenuOpen ? <FaTimes className="block h-6 w-6" /> : <FaBars className="block h-6 w-6" />}
+            </button>
+          </div>
         </div>
-        <nav
-          className={`flex-col items-center flex-grow ${
-            open ? "flex" : "hidden"
-          } gap-3 p-4 px-5 text-sm font-medium text-gray-500 md:px-0 md:pb-0 md:flex md:justify-start md:flex-row lg:p-0 md:mt-0`}
-        >
-          {navLinks.map((link, title) => (
-            <Link
-              className="hover:text-black focus:outline-none focus:text-gray-500 md:ml-auto"
-              href={link}
-            >
-              {title}
-            </Link>
-          ))}
-
-          <a
-            className="inline-flex items-center justify-center w-full h-8 gap-3 px-5 py-3 text-xs font-medium text-white duration-200 bg-gray-900 rounded-lg md:w-auto hover:bg-gray-700 focus:ring-2 focus:ring-offset-2 focus:ring-black"
-            href="#_"
-            role="button"
-          >
-            Button
-          </a>
-        </nav>
       </div>
-    </div>
+      {/* Mobile Menu */}
+      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden`} id="mobile-menu">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {navData.links.map((link, index) => (
+            <a key={index} href={link.href} className="text-black hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">{link.title}</a>
+          ))}
+        </div>
+        <div className="pt-4 pb-3 border-t border-gray-700">
+          <div className="flex items-center px-5">
+            {navData.buttons.map((button, index) => (
+              <a key={index} href={button.href} className="bg-black hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">{button.text}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
 
