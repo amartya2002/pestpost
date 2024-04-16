@@ -27,7 +27,7 @@ function Navbar() {
 
   return (
     <nav className="bg-stone-200 shadow-lg">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -66,7 +66,7 @@ function Navbar() {
         <div className="pt-4 pb-3 border-t border-gray-700">
           <div className="flex items-center px-5">
             {navData.buttons.map((button, index) => (
-              <a key={index} href={button.href} className="bg-black hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">{button.text}</a>
+              <a key={index} href={button.href} className="bg-[#CC092F] hover:bg-gray-100 text-white py-2 px-4 shadow">{button.text}</a>
             ))}
           </div>
         </div>

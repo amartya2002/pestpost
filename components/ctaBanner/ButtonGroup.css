@@ -1,7 +1,7 @@
 .selected {
-    background-color: red;
+    background-color: #CC092F;
     padding: 5px 10px;
-    border-radius: 4px;
+    border-radius: 1px;
     transition: background-color 0.3s ease;
   }
   

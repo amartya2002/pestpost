@@ -43,7 +43,7 @@ const cardData = [
 
 const ScrollCardServices = () => {
   return (
-    <div className="ml-40 mt-14 flex overflow-x-auto ">
+    <div className="sm:ml-40 2xl:ml-auto sm:mt-14 flex overflow-x-auto mb-10 sm:mb-0 mx-auto max-w-7xl ">
       {cardData.map((card, index) => (
         <div key={index} className="mx-4">
           <Card

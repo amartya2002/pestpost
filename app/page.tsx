@@ -12,10 +12,12 @@ import Testimonials from "@/components/testimonials/testimonials";
 export default function Home() {
   return (
     <>
-      <TopBanner />
+    <TopBanner />
       <CTABanner />
       <Header />
       <Hero />
+
+
       <SecondSection/>
       <ScrollCardServices/>
       <PestLibrarySection/>

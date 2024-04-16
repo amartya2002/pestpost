@@ -27,25 +27,25 @@ const cardData = [
         redirect_url: 's4'
     },
     {
-        title: 'Bed Bug Treatment',
+        title: 'Bed Bug',
         description: 'Cimex lectularius',
         image_uri: 'https://picsum.photos/200',
         redirect_url: 's5'
     },
     {
-        title: 'Fly Control',
+        title: 'Fly',
         description: 'Diptera',
         image_uri: 'https://picsum.photos/200',
         redirect_url: 's6'
     },
     {
-        title: 'Bed Bug Treatment',
+        title: 'Bed Bug',
         description: 'Cimex lectularius',
         image_uri: 'https://picsum.photos/200',
         redirect_url: 's5'
     },
     {
-        title: 'Fly Control',
+        title: 'Fly',
         description: 'Diptera',
         image_uri: 'https://picsum.photos/200',
         redirect_url: 's6'
@@ -57,20 +57,23 @@ const cardData = [
 const ScrollCardServices = () => {
     return (
 
-        <div className=' bg-yellow-200 p-16'>
-            <div>
-            <p className='text-red-500 text-sm uppercase'>Pest Library</p>
-    <h1 className='text-5xl font-semibold  max-w-[30rem] my-4'>We believe pest control begins with a deep scientific understanding.</h1>
-    <p className='text-red-500 text-sm uppercase'>Pest Library</p>
-                <div className="overflow-x-auto mt-14 flex ">
-                    {cardData.map((card, index) => (
-                        <div key={index} className="mx-4">
-                            <CircularPestList title={card.title} description={card.description} redirect_url={card.redirect_url} image_uri={card.image_uri} />
-                        </div>
-                    ))}
+<div className='bg-yellow-200 px-6 pt-12 md:px-12 lg:px-32 '>
+    <div className='mx-auto max-w-7xl'>
+        <p className='text-red-500 text-xs uppercase mb-2'>Pest Library</p>
+        <h1 className='text-3xl md:text-4xl lg:text-5xl font-semibold max-w-[30rem] mb-2'>
+            We believe pest control begins with a deep scientific understanding.
+        </h1>
+        <p className='text-red-500 text-xs uppercase mb-6'>Pest Library</p>
+        <div className="overflow-x-auto flex">
+            {cardData.map((card, index) => (
+                <div key={index} className="mx-4">
+                    <CircularPestList title={card.title} description={card.description} redirect_url={card.redirect_url} image_uri={card.image_uri} />
                 </div>
-            </div>
+            ))}
         </div>
+    </div>
+</div>
+
 
 
 

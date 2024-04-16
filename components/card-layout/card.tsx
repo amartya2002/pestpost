@@ -9,7 +9,7 @@ const Card = ({ title, description, redirect_url }: CardProps) => {
   return (
     <a
       href={redirect_url}
-      className="flex h-[24rem] w-[22rem] flex-col justify-between border-2 border-black bg-white px-10 py-14 duration-300 hover:shadow-xl"
+      className="flex h-[22rem] w-[20rem] sm:h-[24rem] sm:w-[22rem] flex-col justify-between border-2 border-black bg-white px-10 py-14 duration-300 hover:shadow-xl"
     >
       <div>
         <h1 className="mb-4 break-words text-2xl font-bold md:text-3xl">

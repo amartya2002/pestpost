@@ -2,12 +2,12 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="bg-stone-200">
-      <div className=" mx-auto h-full px-4 py-20 md:py-18 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
+    <div className="bg-stone-200 pb-10 px-4">
+      <div className=" mx-auto h-full pt-12 md:py-18 sm:max-w-xl md:max-w-full d:px-24 lg:max-w-screen-xl l:px-8">
         <div className="flex flex-col items-center justify-between lg:flex-row">
           <div className=" ">
             <div className="lg:max-w-xl lg:pr-5">
-              <p className="flex text-sm uppercase text-red-600">
+              <p className="flex text-sm uppercase text-[#CC092F]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-1 inline h-5 w-5"
@@ -22,9 +22,9 @@ function Hero() {
                 </svg>
                 An agency for high growth startups
               </p>
-              <h2 className="mb-6 max-w-lg text-5xl font-light leading-snug tracking-tight text-black sm:text-7xl sm:leading-snug">
+              <h2 className="mb-4 max-w-lg text-5xl font-light leading-snug tracking-tight text-black sm:text-7xl sm:leading-snug">
                 We make you look
-                <span className="my-1 inline-block border-b-8 border-black bg-red-600 px-4 font-bold text-white">
+                <span className="my-1 inline-block border-b-8 border-black bg-[#CC092F] px-4 font-bold text-white">
                   different
                 </span>
               </h2>
@@ -33,17 +33,17 @@ function Hero() {
                 accusantium doloremque it.
               </p>
             </div>
-            <div className="mt-10 flex flex-col items-center md:flex-row">
+            <div className="mt-6 mb-8 flex flex-col items-center md:flex-row">
               <a
                 href="/"
-                className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto"
+                className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-[#CC092F] px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-[#CC092F] focus:outline-none md:mr-4 md:mb-0 md:w-auto"
               >
                 Stream Now{" "}
               </a>
               <a
                 href="/"
                 aria-label=""
-                className="group inline-flex items-center font-semibold text-red-600"
+                className="group inline-flex items-center font-semibold text-[#CC092F]"
               >
                 Watch how it works
                 <svg
@@ -63,14 +63,14 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div>
+          <div className="mb-10">
             <img src="https://picsum.photos/500" alt="" />
           </div>
         </div>
       </div>
 
-      <div className="bg-white text-black w-[80%] mx-auto flex p-10">
-        <div className="max-w-[70%]">
+      <div className=" bg-white text-black w-[90%] mx-auto flex p-10 max-w-7xl">
+        <div className="">
           <h1 className="text-2xl font-semibold mb-4">Find Your Local Branch</h1>
           <p className="text-sm ">
             Orkin Pros are experts in your local pests because they live and
