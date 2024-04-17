@@ -57,13 +57,13 @@ const cardData = [
 const ScrollCardServices = () => {
     return (
 
-<div className='bg-yellow-200 px-6 pt-12 md:px-12 lg:px-32 '>
+<div className='bg-[#CC092F] px-6 pt-12 md:px-12 lg:px-32 '>
     <div className='mx-auto max-w-7xl'>
-        <p className='text-red-500 text-xs uppercase mb-2'>Pest Library</p>
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-semibold max-w-[30rem] mb-2'>
+        <p className='text-white text-xs uppercase mb-2'>Pest Library</p>
+        <h1 className='text-3xl md:text-4xl lg:text-5xl font-semibold text-white max-w-[30rem] mb-2'>
             We believe pest control begins with a deep scientific understanding.
         </h1>
-        <p className='text-red-500 text-xs uppercase mb-6'>Pest Library</p>
+        <p className='text-white text-xs uppercase mb-6'>Pest Library</p>
         <div className="overflow-x-auto flex">
             {cardData.map((card, index) => (
                 <div key={index} className="mx-4">

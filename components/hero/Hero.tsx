@@ -1,9 +1,15 @@
 import React from "react";
+import ImageSlider from "../image-slider/ImageSlider";
 
 function Hero() {
+  const heroImgOne = [
+    'https://picsum.photos/500',
+    'https://picsum.photos/501',
+    'https://picsum.photos/502',
+  ];
   return (
     <div className="bg-stone-200 pb-10 px-4">
-      <div className=" mx-auto h-full pt-12 md:py-18 sm:max-w-xl md:max-w-full d:px-24 lg:max-w-screen-xl l:px-8">
+      <div className=" mx-auto h-full pt-12 md:py-18 sm:max-w-xl md:max-w-full md:px-12 lg:max-w-screen-xl lg:px-14 ">
         <div className="flex flex-col items-center justify-between lg:flex-row">
           <div className=" ">
             <div className="lg:max-w-xl lg:pr-5">
@@ -64,12 +70,12 @@ function Hero() {
             </div>
           </div>
           <div className="mb-10">
-            <img src="https://picsum.photos/500" alt="" />
+          <ImageSlider images={heroImgOne} />
           </div>
         </div>
       </div>
 
-      <div className=" bg-white text-black w-[90%] mx-auto flex p-10 max-w-7xl">
+      <div className=" bg-white text-black w-[90%] border-4 border-zinc-300 rounded mx-auto flex p-10 max-w-7xl">
         <div className="">
           <h1 className="text-2xl font-semibold mb-4">Find Your Local Branch</h1>
           <p className="text-sm ">

@@ -3,6 +3,7 @@ import Card from "@/components/card-layout/card";
 import ScrollCardServices from "@/components/card-layout/services-scroll-card";
 import CTABanner from "@/components/ctaBanner/CTABanner";
 import FooterCTA from "@/components/footer-cta/FooterCTA";
+import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
 import PestLibrarySection from "@/components/pest-library/pest-lib-section";
@@ -23,6 +24,7 @@ export default function Home() {
       <PestLibrarySection/>
       <Testimonials/>
       <FooterCTA/>
+      <Footer/>
     </>
   );
 }

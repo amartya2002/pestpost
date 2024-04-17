@@ -1,6 +1,12 @@
 import React from "react";
+import ImageSlider from "../image-slider/ImageSlider";
 
 export default function SecondSection() {
+  const SecondSectionImgOne = [
+    'https://picsum.photos/500',
+    'https://picsum.photos/501',
+    'https://picsum.photos/502',
+  ];
   return (
     <div className="bg-white text-black mx-auto max-w-7xl">
       <div className="mt-16 space-y-4 px-8 text-center">
@@ -21,11 +27,11 @@ export default function SecondSection() {
       </div>
 
       <div className="sm:mt-36">
-        <div className="sm:flex sm:px-20 bg-gray-100 ">
-          <div className="sm:-mt-10">
-            <img src="https://picsum.photos/600/700" alt="" />
+        <div className="sm:flex sm:px-20 sm:bg-gray-100 ">
+          <div className="sm:-mt-10 mt-6">
+          <ImageSlider images={SecondSectionImgOne} />
           </div>
-          <div className="flex flex-col justify-center items-center w-full my-6 sm:my-0 ">
+          <div className="flex flex-col justify-center items-center w-full my-8 sm:my-0 ">
             <div className="space-y-4 px-8 text-center">
               <p className="text-red-400 font-semibold">
                 Results Focused, Customer Centered

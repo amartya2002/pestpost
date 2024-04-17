@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function FooterCTA() {
     return (
-        <div className='bg-gray-100 pt-16'>
+        <div className='bg-gray-100 py-16'>
             <div className=' sm:flex justify-between px-6 sm:px-24 mx-auto max-w-7xl'>
                 <div className=''>
                     <h1 className='text-4xl font-semibold'>Connect With Us</h1>
