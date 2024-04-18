@@ -1,4 +1,4 @@
-# Project Branching Convention
+## Contributing Guidlines
 
 ## Main Branches
 
@@ -28,12 +28,6 @@ Hotfix branches should be prefixed with `hotfix/` followed by a brief descriptio
 - `review/code-review`: Branch where code changes are submitted for peer review before merging into `develop`.
 - `collaboration/design-update`: Branch for collaborative work on a design update feature.
 
-## Environment-specific Branches
-
-- `dev`: Branch for development environment, where developers work on new features and fixes.
-- `staging`: Branch for staging environment, where changes are tested before being promoted to production.
-- `production`: Represents the production environment, mirroring the live website's code.
-
 ## Branch Naming Rules
 
 1. Use lowercase letters for branch names.
@@ -57,3 +51,5 @@ Hotfix branches should be prefixed with `hotfix/` followed by a brief descriptio
 - Document branch purposes and guidelines for team members' reference.
 - Communicate branch naming conventions and workflow to all team members.
 - Regularly clean up old or unused branches to keep the repository organized.
+  
+## Happy Coding.
