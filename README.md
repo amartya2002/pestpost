@@ -51,5 +51,59 @@ Hotfix branches should be prefixed with `hotfix/` followed by a brief descriptio
 - Document branch purposes and guidelines for team members' reference.
 - Communicate branch naming conventions and workflow to all team members.
 - Regularly clean up old or unused branches to keep the repository organized.
+
+  Sure, here's a Markdown document outlining commit message guidelines:
+
+```markdown
+# Commit Message Guidelines
+
+## 1. Summary
+
+- Keep the summary concise and descriptive.
+- Begin with a capital letter and use the imperative mood (e.g., "Add," "Fix," "Update").
+- Limit the summary to 50 characters or less.
+
+## 2. Body
+
+- Provide a detailed explanation of the changes.
+- Use bullet points for listing specific modifications.
+- Describe the rationale behind the changes and any relevant context.
+- Use present tense to describe what the commit does, not what it did.
+- Keep lines wrapped at 72 characters.
+
+## 3. Footer
+
+- Include a footer section if referencing issues or tasks.
+- Use issue or task numbers prefixed with keywords like "Fix," "Close," or "Resolves."
+- Separate the footer from the body with a blank line.
+
+## Example Commit Message
+
+```
+Add login form component
+
+This commit introduces a new login form component to improve user authentication.
+
+- Created LoginForm component
+- Added form fields for username and password
+- Implemented form validation for user input
+
+Closes #34
+```
+
+## Benefits
+
+- Provides clarity and context for each commit.
+- Facilitates understanding and collaboration among team members.
+- Enhances traceability and accountability.
+
+## Additional Tips
+
+- Use consistent formatting and language across commits.
+- Review and proofread commit messages before committing.
+- Commit frequently and logically, focusing on one task per commit.
+```
+
+Adhering to these guidelines helps maintain a clear and informative commit history, making it easier to track changes and collaborate effectively within a project.
   
 ## Happy Coding.
