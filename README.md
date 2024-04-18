@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Branching Convention
 
-## Getting Started
+## Main Branches
 
-First, run the development server:
+- `master`: Contains production-ready code. Code in this branch is deployed to the live website.
+- `develop`: Represents ongoing development. It's where feature branches are merged for testing before deployment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Feature Branches
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Feature branches should be prefixed with `feature/` followed by a brief, descriptive name of the feature being developed. For example:
+- `feature/new-homepage`: Branch for developing a new homepage feature.
+- `feature/contact-form`: Branch for adding a contact form feature.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Release Branches
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Release branches should be named following the format `release-X.Y`, where `X.Y` represents the version number being prepared for release. For example:
+- `release-1.0`: Branch created from `develop` when preparing for the 1.0 release.
+- `release-2.0`: Branch for the 2.0 release.
 
-## Learn More
+## Hotfix Branches
 
-To learn more about Next.js, take a look at the following resources:
+Hotfix branches should be prefixed with `hotfix/` followed by a brief description of the issue being addressed. For example:
+- `hotfix/security-fix`: Branch created from `master` to fix a critical security vulnerability in the live website.
+- `hotfix/404-error`: Branch for addressing a broken link issue discovered in production.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Collaboration and Review Branches
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `review/code-review`: Branch where code changes are submitted for peer review before merging into `develop`.
+- `collaboration/design-update`: Branch for collaborative work on a design update feature.
 
-## Deploy on Vercel
+## Environment-specific Branches
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `dev`: Branch for development environment, where developers work on new features and fixes.
+- `staging`: Branch for staging environment, where changes are tested before being promoted to production.
+- `production`: Represents the production environment, mirroring the live website's code.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Branch Naming Rules
+
+1. Use lowercase letters for branch names.
+2. Separate words with hyphens `-`.
+3. Be descriptive but concise in naming branches.
+4. Avoid using special characters or spaces in branch names.
+
+## Workflow
+
+1. Create feature branches from `develop`.
+2. Merge feature branches back into `develop` after completing the development and testing phase.
+3. Create release branches from `develop` when preparing for a new version release.
+4. Merge release branches into `master` and `develop` after thorough testing and approval.
+5. Create hotfix branches from `master` to address critical issues in the live website.
+6. Merge hotfix branches into `master` and `develop` after fixing the issue.
+7. Use review branches for code reviews and collaboration efforts.
+8. Maintain separate branches for different environments to ensure code stability and traceability.
+
+## Additional Guidelines
+
+- Document branch purposes and guidelines for team members' reference.
+- Communicate branch naming conventions and workflow to all team members.
+- Regularly clean up old or unused branches to keep the repository organized.
