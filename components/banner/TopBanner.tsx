@@ -12,7 +12,7 @@ export default function TopBanner() {
                         </svg>
                     </div>
                     <p className="py-2 font-medium text-xs">
-                    {bannerTitle}
+                    {bannerTitle} 
                     </p>
                 </div>
                 <button title="close" className="p-2 rounded-lg duration-150 hover:bg-indigo-500 ring-offset-2 focus:ring">
