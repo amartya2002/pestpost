@@ -26,20 +26,80 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-<section className="px-6 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-[20rem] my-4">How our clients feel matters the most.</h2>
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        {testimonials.map((testimonial) => (
-          <div key={testimonial.id}>
-            <div className="bg-white p-6 rounded border shadow-lg">
-              <img alt={testimonial.name} className="object-cover w-20 h-20 rounded-full mb-4 mx-auto" src={testimonial.imageSrc} loading="lazy" />
-              <p className="text-lg font-semibold text-gray-800 text-center mb-4">{testimonial.name}</p>
-              <p className="text-sm text-gray-600 leading-relaxed">{testimonial.content}</p>
-              <p className="text-sm text-gray-500 text-center mt-4">{testimonial.role}</p>
-            </div>
-          </div>
-        ))}
+    <section className="px-6 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-[25rem] my-4">How our clients feel matters the most.</h2>
+
+      <div className="">
+        <ul className="w-full" role="list">
+          <li className="py-4 lg:py-8">
+
+
+            {testimonials.map((testimonial) => (
+              <div className=' border-t py-6' key={testimonial.id}>
+                <div className="mb-4">
+                  <p className="text-sm font-medium text-gray-500 text-balance">
+                    {testimonial.content}
+                  </p>
+                </div>
+                <div className="inline-flex items-center gap-3">
+                  <div className="flex-shrink-0">
+                    <img alt="" className="object-cover w-10 h-10 rounded-full lg:h-16 lg:w-16" src={testimonial.imageSrc} loading="lazy" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-lg font-medium leading-6 text-black">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+
+
+
+          </li>
+        </ul>
       </div>
+
     </section>
   );
 }
+
+
+
+{/* <div>
+  <div className="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl">
+    <ul className="w-full border-t divide-y border-mercury-300 divide-mercury-300" role="list">
+      <li className="py-4 lg:py-8">
+        <div className="grid items-start grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-24">
+
+        {testimonials.map((testimonial) => (
+                    <div key={testimonial.id}>
+                    <div className="lg:col-span-2 lg:order-last">
+                      <p className="text-sm font-medium text-gray-500 text-balance">
+                        {testimonial.content}
+                      </p>
+                    </div>
+                    <div className="inline-flex items-center gap-3">
+                      <div className="flex-shrink-0">
+                        <img alt="" className="object-cover w-10 h-10 rounded-full lg:h-16 lg:w-16" src={testimonial.imageSrc} loading="lazy" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-lg font-medium leading-6 text-black">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm text-gray-500">{testimonial.role}</p>
+                      </div>
+                    </div>
+                    </div>
+        ) )}
+
+
+
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</div> */}

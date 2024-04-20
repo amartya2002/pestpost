@@ -17,9 +17,17 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   }, [images.length]);
 
   return (
-    <div className="mb-10">
-      <img className="border-4 border-zinc-300 rounded" src={images[imageIndex]} alt="" />
-    </div>
+    // <div className="mb-10">
+    //   <img className="border-4 border-zinc-300 rounded" src={images[imageIndex]} alt="" />
+    // </div>
+
+    <section>
+<div>
+  <div className="h-full p-2 overflow-hidden border  rounded-lg">
+    <img title='image' src={images[imageIndex]} className="object-cover h-full border shadow-2xl rounded"/>
+  </div>
+</div>
+</section>
   );
 };
 

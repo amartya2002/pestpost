@@ -12,7 +12,7 @@ const SocialIcons = () => {
 
 const Bottombanner = () => {
     return (
-        <div className="bg-[#CC092F] px-6 w-full h-16 fixed bottom-0 sm:hidden flex justify-between items-center">
+        <div className="bg-[#CC092F] px-6 w-full h-12 fixed bottom-0 sm:hidden flex justify-between items-center">
             <SocialIcons />
             <a href="/" className="text-white font-sans">Get a Quote &#10141;</a>
         </div>

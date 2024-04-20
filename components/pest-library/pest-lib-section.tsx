@@ -67,7 +67,7 @@ const ScrollCardServices = () => {
         <div className="overflow-x-auto flex">
             {cardData.map((card, index) => (
                 <div key={index} className="mx-4">
-                    <CircularPestList title={card.title} description={card.description} redirect_url={card.redirect_url} image_uri={card.image_uri} />
+                    <CircularPestList title={card.title} description={card.description} redirect_url={card.redirect_url} image_uri={card.image_uri} text_color='light' />
                 </div>
             ))}
         </div>

@@ -2,6 +2,7 @@ import TopBanner from "@/components/banner/TopBanner";
 import Card from "@/components/card-layout/card";
 import ScrollCardServices from "@/components/card-layout/services-scroll-card";
 import CTABanner from "@/components/ctaBanner/CTABanner";
+import Faq from "@/components/faq/Faq";
 import FooterCTA from "@/components/footer-cta/FooterCTA";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
@@ -13,18 +14,19 @@ import Testimonials from "@/components/testimonials/testimonials";
 export default function Home() {
   return (
     <>
-    <TopBanner />
+      <TopBanner />
       <CTABanner />
       <Header />
       <Hero />
 
 
-      <SecondSection/>
-      <ScrollCardServices/>
-      <PestLibrarySection/>
-      <Testimonials/>
-      <FooterCTA/>
-      <Footer/>
+      <SecondSection />
+      <ScrollCardServices />
+      <PestLibrarySection />
+      <Faq />
+      <Testimonials />
+      <FooterCTA />
+      <Footer />
     </>
   );
 }
